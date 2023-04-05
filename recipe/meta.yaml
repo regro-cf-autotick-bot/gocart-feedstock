@@ -1,5 +1,5 @@
 {% set name = "gocart" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.7" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: fc25673cd65a1eda8b1cc9693a179d0022861af31d42866e7906a8d4ebecc5e5
+  sha256: 879fe060594347b6a39ab8aad7fcabbdd0502f0af0ff46286781747aaf7f42dd
 
 build:
   noarch: python
@@ -24,6 +24,15 @@ requirements:
     - fundamentals
     - python >=3.9
     - pyyaml
+    - astropy==5.1.0,
+    - astropy-healpix
+    - numpy
+    - matplotlib
+    - healpy
+    - pandas
+    - tabulate
+    - ligo.skymap
+    - gcn-kafka
 
 test:
   imports:
