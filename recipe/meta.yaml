@@ -24,7 +24,7 @@ requirements:
     - fundamentals
     - python >=3.9
     - pyyaml
-    - astropy ==5.1.0,
+    - astropy
     - astropy-healpix
     - numpy
     - matplotlib-base
