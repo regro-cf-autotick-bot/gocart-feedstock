@@ -2,8 +2,8 @@
 {% set version = "0.3.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
@@ -12,9 +12,9 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - "gocart = gocart.cl_utils:main"
+    - gocart = gocart.cl_utils:main
 
 requirements:
   host:
@@ -43,7 +43,7 @@ about:
   license: GPL-3.0-only
   license_family: GPL3
   license_file: LICENSE
-  summary: "Listen for, collect and convert multimessenger skymaps"
+  summary: Listen for, collect and convert multimessenger skymaps
   doc_url: https://gocart.readthedocs.io
   dev_url: https://github.com/thespacedoctor/gocart
 
