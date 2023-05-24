@@ -1,13 +1,13 @@
 {% set name = "gocart" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: fb7efd7468f5f2ddda6b459a359db8395d2f59e68eea54fcea50fec57bcdefe9
+  sha256: 67dc7df1b0ccd16cb0881f6fcef1b27e77becc4b4ee6465909b6dfa2ae036417
   
 build:
   noarch: python
@@ -31,8 +31,8 @@ requirements:
     - healpy
     - pandas
     - tabulate
-    - ligo.skymap
     - gcn-kafka
+    - mhealpy
 
 test:
   imports:
