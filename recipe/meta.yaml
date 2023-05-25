@@ -1,5 +1,5 @@
 {% set name = "gocart" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 67dc7df1b0ccd16cb0881f6fcef1b27e77becc4b4ee6465909b6dfa2ae036417
+  sha256: 56a80d0dd0dd05408fcea0e680413679731a392a4f262e01f1b17cbf9033ac5c
   
 build:
   noarch: python
