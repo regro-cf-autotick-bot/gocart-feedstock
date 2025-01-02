@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - gocart = gocart.cl_utils:main
@@ -19,10 +19,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
   run:
     - fundamentals
-    - python >=3.9
+    - python >={{ python_min }}
     - pyyaml
     - astropy
     - astropy-healpix
@@ -35,6 +35,8 @@ requirements:
     - mhealpy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - gocart
 
